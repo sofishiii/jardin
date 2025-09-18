@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>06 tarea boomerang</title>
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/MotionPathPlugin.min.js"></script>
+</head>
+<body>
+  <div class="scene">
+    <!-- Ruta curva en U -->
+    <svg class="svg-path" viewBox="0 0 800 600">
+      <path id="curvePath" d="M100,300 Q400,100 700,300 Q400,500 100,300"
+            fill="none" stroke="transparent" stroke-width="2"/>
+    </svg>
+
+    <!-- Imagen del boomerang -->
+    <img src="img/boomerang.png" alt="Boomerang" class="boomerang" id="boomerang">
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

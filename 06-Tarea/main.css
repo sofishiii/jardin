@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    background: lightblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .scene {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    background-color: lightblue;
+    border: 2px solid lightblue;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .svg-path {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 800px;
+    height: 600px;
+    z-index: 1;
+  }
+  
+  .boomerang {
+    width: 60px;
+    position: absolute;
+    top: 270px;
+    left: 70px;
+    cursor: pointer;
+    z-index: 2;
+    transition: transform 0.2s ease;
+  }
+  
