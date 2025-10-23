@@ -1,0 +1,113 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 1440px;
+    height: 750px;
+    position: relative;
+    background-color: #fff;
+    padding: 40px 60px;
+  }
+  
+  /* HEADER */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+  }
+  
+  .logo p {
+    font-weight: bold;
+    line-height: 1.1;
+  }
+  
+  .logo .number {
+    display: block;
+    margin-top: 10px;
+    font-size: 12px;
+    color: #444;
+  }
+  
+  nav ul {
+    display: flex;
+    gap: 50px;
+    list-style: none;
+    font-family: monospace;
+    letter-spacing: 1px;
+  }
+  
+  .contact {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+  }
+  
+  /* MAIN TITLE */
+  main h1 {
+    font-size: 140px;
+    font-weight: 900;
+    letter-spacing: -4px;
+    line-height: 1;
+    margin-top: 60px;
+    text-align: center;
+  }
+  
+  main h1 span {
+    display: block;
+  }
+  
+  /* Subtitle ("Based in Ukraine") */
+  .subtitle {
+    text-align: center;
+    letter-spacing: 12px;
+    font-size: 12px;
+    margin-top: 10px;
+  }
+  
+  /* Placeholder (purple square simulating image) */
+  .image-placeholder {
+    width: 300px;
+    height: 400px;
+    background-color: #7A3EFF;
+    position: absolute;
+    top: 260px;
+    left: 720px;
+  }
+  
+  /* Skills list (left side of image) */
+  .skills {
+    position: absolute;
+    top: 360px;
+    left: 460px;
+    font-weight: bold;
+    line-height: 1.8;
+    font-size: 16px;
+  }
+  
+  /* Description text (bottom center) */
+  .description {
+    position: absolute;
+    bottom: 40px;
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #333;
+    letter-spacing: 1px;
+  }
+  
