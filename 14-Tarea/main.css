@@ -1,0 +1,123 @@
+/* --- GENERAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    width: 1440px;
+    height: 750px;
+    font-family: 'Libre Baskerville', serif;
+    background: url('imgs/img11.jpeg') center/cover no-repeat;
+    overflow: hidden;
+    color: white;
+  }
+  
+  /* --- CONTAINER --- */
+  .container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* --- SIDEBAR --- */
+  .sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 0;
+    background: rgba(0, 0, 0, 0.2);
+  }
+  
+  .menu-icon {
+    font-size: 26px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    transform: rotate(180deg);
+    letter-spacing: 2px;
+    font-size: 12px;
+    opacity: 0.8;
+  }
+  
+  .red-crosses {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  
+  .red-crosses span {
+    display: block;
+    width: 14px;
+    height: 14px;
+    background: red;
+  }
+  
+  /* --- CONTENT --- */
+  .content {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    width: calc(100% - 80px);
+    height: 100%;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  /* --- TITLE --- */
+  .title {
+    font-size: 180px;
+    color: #ff0000;
+    letter-spacing: 20px;
+    text-transform: uppercase;
+    font-weight: 700;
+    line-height: 0.8;
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* --- DESCRIPTION --- */
+  .description {
+    position: absolute;
+    left: 100px;
+    bottom: 160px;
+    font-size: 18px;
+    line-height: 1.6;
+    width: 420px;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.6);
+  }
+  
+  /* --- SCROLL BUTTON --- */
+  .scroll-btn {
+    position: absolute;
+    right: 80px;
+    bottom: 80px;
+    width: 90px;
+    height: 90px;
+    background: red;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .wave {
+    font-size: 32px;
+    color: white;
+    transform: rotate(180deg);
+  }
+  
