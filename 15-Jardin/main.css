@@ -84,6 +84,7 @@ body {
   .img-box:hover {
     background: #74ff8b; /* cambia color al pasar el ratón */
     transition: opacity 0.9s ease, transform 0.9s ease;
+    
   }
 
   .img-box1:hover {
