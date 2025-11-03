@@ -1,8 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jamarea Layout </title>
-  <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ethical Life</title>
+  <link rel="stylesheet" href="main.css" />
 </head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="logo">Ethical<span>Life</span></div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#filosofia">Filosofía</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inicio" class="hero">
+    <canvas id="bg-canvas"></canvas>
+    <div class="hero-content">
+      <h1>Vive Éticamente</h1>
+      <p>Un mundo más consciente comienza contigo.</p>
+    </div>
+  </section>
+
+  <section id="filosofia" class="content">
+    <h2>Nuestra Filosofía</h2>
+    <p>
+      Promovemos la ética, sostenibilidad y responsabilidad social en cada acción.
+      Inspiramos decisiones que transforman vidas y comunidades.
+    </p>
+  </section>
+
+  <footer id="contacto">
+    <p>© 2025 Ethical Life - Todos los derechos reservados</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.157.0/build/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
