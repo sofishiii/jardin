@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+    overflow: hidden;
+    font-family: system-ui, sans-serif;
+  }
+  
+  /* El canvas ocupa toda la ventana */
+  #canvas {
+    display: block;
+    width: 100vw;
+    height: 100vh;
+  }
+  

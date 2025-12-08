@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #000000;
+  --text-main: #f5f5f5;
+  --muted: #d2d2d2;
+  --frame-width: 1440px;
+  --frame-height: 750px;
+  --font-sans: system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Times New Roman", Georgia, serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #050505;
+  color: var(--text-main);
+  font-family: var(--font-sans);
+}
+
+/* Artboard 1440x750 centrado */
+.frame {
+  position: relative;
+  width: var(--frame-width);
+  height: var(--frame-height);
+  background: var(--bg);
+  overflow: hidden;
+}
+
+/* Título gigante arriba */
+.hero-title {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 30px 40px 0;
+  font-size: 130px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Zona media: about / frase / contact */
+.hero-middle {
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.nav-left {
+  position: absolute;
+  left: 40px;
+}
+
+.nav-right {
+  position: absolute;
+  right: 40px;
+  text-align: right;
+}
+
+.tagline {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+/* DESIGN - FOLIO */
+.hero-subtitle {
+  position: absolute;
+  bottom: 180px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 34px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.word-regular {
+  font-family: var(--font-sans);
+  font-weight: 500;
+}
+
+.dash {
+  margin: 0 10px;
+}
+
+.word-italic {
+  font-family: var(--font-serif);
+  font-style: italic;
+}
+
+/* Franja inferior con “foto” */
+.hero-bottom {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 170px;
+  /* Simula la foto con un degradado metalizado */
+  background: radial-gradient(
+      circle at 60% 0%,
+      rgba(255, 255, 255, 0.9) 0,
+      rgba(200, 200, 200, 0.3) 28%,
+      rgba(20, 20, 20, 1) 68%
+    ),
+    linear-gradient(90deg, #1c1c20 0%, #0a0a0d 100%);
+}
+
+/* Texto pequeño encima de la franja */
+.bottom-text {
+  margin: 26px auto 0;
+  text-align: center;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--muted);
+}

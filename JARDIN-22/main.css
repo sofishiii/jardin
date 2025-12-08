@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.frame {
+    width: 1440px;
+    height: 750px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Imagen flotante */
+.preview-box {
+    width: 220px;
+    height: 300px;
+    background: #ffb3b3;
+    position: absolute;
+    top: 40px;
+    left: 610px;
+    border-radius: 4px;
+    opacity: 0;
+    transition: opacity .3s ease;
+}
+
+/* Lista de títulos */
+.titles {
+    position: absolute;
+    bottom: 120px;
+    width: 100%;
+    text-align: center;
+}
+
+.item {
+    font-size: 55px;
+    display: inline-block;
+    margin: 18px;
+    color: #d0d0d0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: color .3s ease;
+}
+
+.item sup {
+    font-size: 20px;
+    opacity: 0.4;
+}
+
+.item:hover {
+    color: black;
+}
+
+.active {
+    color: black !important;
+}

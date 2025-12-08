@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Prompt Martes 4 Nov</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="frame">
+      <!-- HEADER -->
+      <header class="top-bar">
+        <div class="logo">
+          <!-- Puedes cambiar esto por un PNG -->
+          <div class="logo-shape"></div>
+          <div class="logo-shape"></div>
+          <div class="logo-shape"></div>
+        </div>
+
+        <div class="top-buttons">
+          <button class="btn btn-contact">contact</button>
+          <button class="btn btn-menu">menu</button>
+        </div>
+      </header>
+
+      <!-- CANVAS 3D -->
+      <main class="main-area">
+        <canvas id="scene"></canvas>
+      </main>
+
+      <!-- FOOTER TEXTOS -->
+      <footer class="bottom-bar">
+        <span>video as<br />playground</span>
+        <span>studio de<br />création vidéo</span>
+        <span>born to<br />be online</span>
+      </footer>
+
+      <!-- SHOWREEL THUMB (puedes cambiar la imagen) -->
+      <aside class="showreel">
+        <div class="showreel-thumb">
+          <img src="placeholder.jpg" alt="showreel" />
+        </div>
+        <div class="showreel-info">
+          <span>MOTION DESIGN</span>
+          <div class="showreel-toggle">
+            showreel
+            <span class="toggle-dot"></span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- BOTÓN SCROLL ABAJO DERECHA -->
+      <button class="scroll-btn" aria-label="Scroll down">
+        ⬇
+      </button>
+    </div>
+
+    <!-- Three.js desde CDN -->
+    <script src="https://unpkg.com/three@0.165.0/build/three.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,176 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --frame-w: 1440px;
+  --frame-h: 750px;
+  --orange: #ff4a00;
+  --beige: #c9c2a7;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #050505;
+  font-family: var(--font-main);
+}
+
+/* Artboard fijo ------------------------------------------------- */
+
+.frame {
+  position: relative;
+  width: var(--frame-w);
+  height: var(--frame-h);
+  background: #000000;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* Header -------------------------------------------------------- */
+
+.top-bar {
+  position: absolute;
+  top: 22px;
+  left: 30px;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+/* Logo muy simple con 3 bloques */
+.logo {
+  display: flex;
+  gap: 6px;
+}
+
+.logo-shape {
+  width: 34px;
+  height: 26px;
+  border-radius: 6px 6px 14px 14px;
+  background: #ffffff;
+}
+
+/* Botones arriba derecha */
+.top-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  border: none;
+  padding: 10px 26px;
+  border-radius: 8px;
+  font-size: 14px;
+  text-transform: lowercase;
+}
+
+.btn-contact {
+  background: var(--orange);
+  color: #ffffff;
+}
+
+.btn-menu {
+  background: var(--beige);
+  color: #111111;
+}
+
+/* Canvas 3D ocupa la parte central ------------------------------ */
+
+.main-area {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#scene {
+  width: 1050px;
+  height: 480px;
+  display: block;
+}
+
+/* Bottom text --------------------------------------------------- */
+
+.bottom-bar {
+  position: absolute;
+  left: 40px;
+  right: 40px;
+  bottom: 32px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+/* Showreel card ------------------------------------------------- */
+
+.showreel {
+  position: absolute;
+  right: 40px;
+  bottom: 78px;
+  display: flex;
+  align-items: flex-end;
+  gap: 12px;
+}
+
+.showreel-thumb {
+  width: 220px;
+  height: 130px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.7);
+}
+
+.showreel-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.showreel-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 13px;
+}
+
+.showreel-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.toggle-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 2px solid #ffffff;
+}
+
+/* Scroll button ------------------------------------------------- */
+
+.scroll-btn {
+  position: absolute;
+  right: 46px;
+  bottom: 26px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: var(--orange);
+  color: #ffffff;
+  font-size: 18px;
+}

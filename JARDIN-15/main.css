@@ -1,0 +1,350 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-page: #0c0c0d;
+  --bg-frame: #111111;
+  --card-radius: 28px;
+  --text-main: #111111;
+  --text-light: #f4f4f4;
+  --muted: #9b9b9f;
+  --accent: #ff7b3a;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+}
+
+/* Body + frame ---------------------------------------------------- */
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-page);
+  font-family: var(--font-main);
+}
+
+.frame {
+  width: 1440px;
+  height: 750px;
+  padding: 24px 30px 30px;
+  background: var(--bg-frame);
+  border-radius: 32px;
+  color: var(--text-main);
+}
+
+/* Top bar --------------------------------------------------------- */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  color: var(--text-light);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+
+.tabs {
+  display: flex;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 4px;
+  border-radius: 999px;
+}
+
+.tab {
+  border: none;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 12px;
+  padding: 6px 18px;
+  border-radius: 999px;
+  cursor: default;
+}
+
+.tab--active {
+  background: #f0f0f1;
+  color: #111111;
+}
+
+/* Grid general ---------------------------------------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.15fr 1.05fr;
+  grid-template-rows: 1.1fr 1.0fr;
+  gap: 18px;
+  height: calc(100% - 40px);
+}
+
+/* Cards base ------------------------------------------------------ */
+
+.card {
+  position: relative;
+  background: #f3f3f5;
+  border-radius: var(--card-radius);
+  overflow: hidden;
+}
+
+/* Fondos de “foto” con degradados / texturas fake ---------------- */
+
+.card-bg {
+  position: absolute;
+  inset: 0;
+}
+
+/* Izquierda: cable naranja */
+.card-bg--rope-orange {
+  background: radial-gradient(circle at 10% 0%, #ffb16a 0, #d35213 55%, #4c1d07 100%);
+}
+
+/* Izquierda abajo: cable negro */
+.card-bg--rope-black {
+  background: linear-gradient(135deg, #151515 0, #252525 40%, #050505 100%);
+}
+
+/* Centro: metal naranja */
+.card-bg--metal-orange {
+  background: linear-gradient(135deg, #ff9a4b 0, #ff7b3a 40%, #4b4e55 100%);
+}
+
+/* Centro abajo: paisaje */
+.card-bg--landscape {
+  background: linear-gradient(180deg, #506f42 0, #263b22 30%, #151515 100%);
+}
+
+/* Contenido sobre los fondos */
+.card-inner {
+  position: relative;
+  z-index: 1;
+  color: var(--text-light);
+}
+
+/* Hero izquierda -------------------------------------------------- */
+
+.card--hero-left {
+  padding: 26px 28px;
+}
+
+.card--hero-left h2 {
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  width: 60%;
+  font-size: 32px;
+  line-height: 1.2;
+  color: #ffffff;
+}
+
+/* Producto abajo izquierda --------------------------------------- */
+
+.card--product {
+  display: grid;
+  grid-template-columns: 1.1fr 1.1fr;
+  background: #f0ebe7;
+}
+
+.product-text {
+  padding: 30px 28px 26px 30px;
+}
+
+.product-text h3 {
+  margin: 0 0 20px;
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.spec {
+  margin-bottom: 18px;
+}
+
+.spec .label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.spec .value {
+  font-size: 13px;
+}
+
+.know-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 14px;
+  font-size: 13px;
+}
+
+.know-more .arrow {
+  color: var(--accent);
+}
+
+.product-image {
+  position: relative;
+}
+
+.product-controls {
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.product-controls button {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  font-size: 13px;
+}
+
+/* Hero centro ----------------------------------------------------- */
+
+.card--hero-center {
+  grid-row: 1 / span 1;
+}
+
+/* Sustainability abajo centro ------------------------------------ */
+
+.card--sustain {
+  padding: 26px 26px;
+  color: var(--text-light);
+}
+
+.card-inner--center {
+  text-align: center;
+  top: 20%;
+}
+
+.card-inner--center .eyebrow {
+  display: block;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card-inner--center h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.card-inner--center p {
+  margin: 0;
+  font-size: 13px;
+}
+
+/* Industrias derecha ---------------------------------------------- */
+
+.card--industries {
+  padding: 26px 30px 32px;
+  background: #e6d9cc;
+}
+
+.pill {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.industries-list {
+  margin: 22px 0 16px;
+  padding: 0;
+  list-style: none;
+}
+
+.industries-list li {
+  font-size: 24px;
+  line-height: 1.25;
+}
+
+.more {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.more span {
+  color: #b5aba1;
+}
+
+/* Swatches abajo derecha ------------------------------------------ */
+
+.card--swatches {
+  padding: 20px 26px 22px;
+  background: #f5eee8;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.swatches {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  flex: 1;
+}
+
+.swatch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.swatch-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 22px;
+}
+
+/* Degradados simulando cada producto */
+.swatch-img--1 {
+  background: linear-gradient(135deg, #111 0, #444 55%, #f5eee8 100%);
+}
+.swatch-img--2 {
+  background: linear-gradient(135deg, #f9f1e4 0, #f5b97f 40%, #c86b24 100%);
+}
+.swatch-img--3 {
+  background: linear-gradient(135deg, #1e1c28 0, #6c3840 40%, #f9955f 100%);
+}
+.swatch-img--4 {
+  background: linear-gradient(135deg, #fdf4ea 0, #ffb573 40%, #ff7b3a 100%);
+}
+
+.swatch-label {
+  font-size: 11px;
+  text-align: center;
+}
+
+/* Botón de contacto */
+.contact-btn {
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: #ffffff;
+  font-size: 13px;
+  cursor: pointer;
+}

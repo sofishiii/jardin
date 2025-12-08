@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #050816 0%, #02010a 60%, #000 100%);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* Canvas a pantalla completa */
+  #canvas {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    display: block;
+  }
+  
+  /* UI flotante para el botón */
+  .ui {
+    position: fixed;
+    inset: 20px 0 auto 0;
+    display: flex;
+    justify-content: center;
+    pointer-events: none; /* la UI no bloquea el canvas salvo el botón */
+  }
+  
+  #spinBtn {
+    pointer-events: auto;
+    padding: 10px 18px;
+    border-radius: 999px;
+    border: none;
+    background: #ff7ac4;
+    color: #130016;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+  }
+  
+  #spinBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.55);
+    background: #ff96d0;
+  }
+  
+  #spinBtn:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.35);
+  }
+  

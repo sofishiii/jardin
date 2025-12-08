@@ -1,0 +1,199 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-body: #dcdcdc;
+  --bg-frame: #f5f5f5;
+  --text-main: #111111;
+  --muted: #777777;
+  --frame-width: 1440px;
+  --frame-height: 750px;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-body);
+  font-family: var(--font-main);
+  color: var(--text-main);
+}
+
+/* Artboard */
+.frame {
+  position: relative;
+  width: var(--frame-width);
+  height: var(--frame-height);
+  background: var(--bg-frame);
+  padding: 32px 60px 40px;
+  overflow: hidden;
+}
+
+/* HEADER --------------------------------------------------- */
+
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+/* Logo */
+.logo {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+}
+
+/* Nav centrada arriba */
+.main-nav {
+  display: flex;
+  gap: 60px;
+  font-size: 12px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: var(--text-main);
+}
+
+/* Contact button derecha */
+.contact-btn {
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-main);
+  border-bottom: 1px solid var(--text-main);
+  padding-bottom: 3px;
+}
+
+.contact-btn .arrow {
+  font-size: 12px;
+  margin-left: 6px;
+}
+
+/* NÚMERO PEQUEÑO ------------------------------------------ */
+
+.tiny-number {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  margin-top: 16px;
+}
+
+/* HERO TITLE ----------------------------------------------- */
+
+.hero {
+  margin-top: 4px;
+  position: relative;
+}
+
+.hero-title {
+  margin: 0;
+  font-size: 120px;
+  line-height: 0.9;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+}
+
+/* Para que parezca que “DESIGNER” empieza casi pegado */
+.hero-break {
+  display: inline-block;
+  width: 20px;
+}
+
+/* BASED IN UKRAINE bajo la parte derecha del título */
+.hero-meta {
+  position: absolute;
+  right: 80px;
+  bottom: -22px;
+  display: flex;
+  gap: 30px;
+  font-size: 11px;
+  letter-spacing: 0.4em;
+  text-transform: uppercase;
+}
+
+/* TARJETA CENTRAL ------------------------------------------ */
+
+.hero-content {
+  margin-top: 70px; /* Empuja el bloque hacia abajo */
+}
+
+.card {
+  width: 720px;
+  height: 360px;
+  background: #f0f0f0;
+  display: grid;
+  grid-template-columns: 1.1fr 1.2fr;
+  overflow: hidden;
+}
+
+/* Columna izquierda: servicios */
+.card-left {
+  padding: 40px 40px 40px 60px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.services {
+  margin: 0;
+  font-size: 18px;
+  line-height: 1.4;
+  font-weight: 700;
+}
+
+/* Columna derecha: foto */
+.card-right {
+  position: relative;
+  background: #e5e5e5;
+}
+
+/* Simulación de foto */
+.photo-placeholder {
+  position: absolute;
+  inset: 20px 20px 0 20px;
+  background: radial-gradient(circle at top, #fdfdfd 0%, #cccccc 70%);
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  letter-spacing: 0.3em;
+}
+
+/* Descripción bajo la tarjeta */
+.description {
+  margin: 32px 0 0;
+  font-size: 11px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  text-align: center;
+  color: #333333;
+}
+
+/* FOOTER DERECHO ------------------------------------------- */
+
+.bottom-right {
+  position: absolute;
+  right: 60px;
+  bottom: 24px;
+}
+
+.bottom-right a {
+  font-size: 11px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--text-main);
+}
